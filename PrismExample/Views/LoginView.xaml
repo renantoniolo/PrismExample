@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms" 
+	prism:ViewModelLocator.AutowireViewModel="True" 
+	x:Class="PrismExample.Views.LoginView"
+	Title="Login"
+	BackgroundColor="#FFF">
+	<StackLayout Padding="10">
+		<Label Text="Usuário:" TextColor="Blue" Margin="5,0,5,0"></Label>
+		<Entry Text="{Binding TextUser}" TextColor="Gray" Placeholder="Usuario" Margin="10,0,5,0" />
+		<Label Text="Senha:" TextColor="Blue" Margin="5,0,5,0"></Label>
+		<Entry Text="{Binding TextSenha}" TextColor="Gray" Placeholder="Senha" IsPassword="true" Margin="10,0,5,0" />
+   		<Button Text="Entrar" Command="{Binding EntrarCommand}"/>	
+	</StackLayout>
+</ContentPage>
